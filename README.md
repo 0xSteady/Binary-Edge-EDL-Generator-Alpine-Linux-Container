@@ -11,7 +11,7 @@ is eliminated from the first IP Address in the file
 
 Each instance of 
 
-          ", ") 
+          ", "
 
 is replaced by a newline
 
