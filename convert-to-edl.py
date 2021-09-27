@@ -14,7 +14,7 @@
 #
 # Each instance of 
 #
-#           ", ") 
+#           ", "
 #
 # is replaced by a newline
 # 
