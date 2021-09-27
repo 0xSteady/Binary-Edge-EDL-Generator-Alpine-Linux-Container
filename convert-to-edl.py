@@ -47,14 +47,9 @@ data2 = data.replace("{\"scanners\":[ \"", "\n")
 data3 = data2.replace("\"]}", "\n")
 newdata = (data3.replace("\", \"", "\n")) 
 
-# Open the file minions.edl.txt in the current working directory for the newly formatted data and begin write
-# The initial write covers about 90% of the files contents.  I added a second write to compelte it.  
+# Open the file minions.edl.txt in the current working directory and write the newly formatted data.  
 output = open("./minions.edl.txt", "w")
-output.write(newdata)
-
-# Finish writing in append mode.  I'm sure there is a more elegant way to do this and this will probably 
-# break if the buffer gets longer in the future
-output = open("./minions.edl.txt", "a")
+output.writelines(newdata)
 
 # Close the file
 output.close()
