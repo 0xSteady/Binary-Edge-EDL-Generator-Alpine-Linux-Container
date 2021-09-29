@@ -3,23 +3,33 @@ This script normalizes the data contained in the file published by Binary Edge a
 
 The Script reads in the file minions from the current working directory and then strips out the following lines and characters:
 
-From the first line  
+1. From the first line  
 
          {"scanners":[ "
 
-is eliminated from the first IP Address in the file
+is eliminated before the first IP Address in the file
 
-Each instance of 
+2. Each instance of 
 
           ", "
 
 is replaced by a newline
 
-The characters
+3. The characters
 
            "]}
 
 Are removed from the last IP Address in the file
+
+# Requirements & Dependencies
+1. Python3
+2. Python3 requests module (https://pypi.org/project/requests/)
+
+# Installing requests module
+See https://pypi.org/project/requests/
+
+         pip install requests
+
 
 # Support Policy
 
