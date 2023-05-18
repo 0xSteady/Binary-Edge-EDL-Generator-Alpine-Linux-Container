@@ -2,4 +2,4 @@ services:
   minionsparser:
     build: .
     volumes: 
-      - /tmp/minions:/tmp/minions
+      - /tmp/minionsparser:/tmp/minionsparser

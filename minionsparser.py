@@ -23,7 +23,7 @@ link = "https://api.binaryedge.io/v1/minions"
 f = requests.get(link)
 
 # Replace characters as mentioned above
-data2 = f.text.replace("{\"scanners\":[ \"", "\n")
+data2 = f.text.replace("{\"scanners\": [\"", "\n")
 data3 = data2.replace("\"]}", "\n")
 newdata = (data3.replace("\", \"", "\n")) 
 
