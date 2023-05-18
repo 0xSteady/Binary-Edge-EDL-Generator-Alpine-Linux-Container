@@ -1,0 +1,5 @@
+services:
+  minionsparser:
+    build: .
+    volumes: 
+      - /tmp/minions:/tmp/minions

@@ -52,8 +52,8 @@ data2 = f.text.replace("{\"scanners\":[ \"", "\n")
 data3 = data2.replace("\"]}", "\n")
 newdata = (data3.replace("\", \"", "\n")) 
 
-# Open the file minions.edl.txt in the current working directory and write the newly formatted data.  
-output = open("./minions.edl.txt", "w")
+# Open the file minions.edl.txt in the tmp directory and write the newly formatted data.  
+output = open("/tmp/minionsparser/minions.edl.txt", "w")
 output.writelines(newdata)
 
 # Close the file
