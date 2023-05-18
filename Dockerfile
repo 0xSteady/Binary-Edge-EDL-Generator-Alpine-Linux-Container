@@ -8,6 +8,5 @@ COPY run.sh /root/
 COPY minionsparser.py /etc/periodic/daily
 RUN chmod +x /root/run.sh
 RUN chmod +x /etc/periodic/daily/minionsparser.py
-# RUN rc-service crond start && rc-update add crond
 VOLUME /tmp/minionsparser
 CMD ["/root/run.sh"]

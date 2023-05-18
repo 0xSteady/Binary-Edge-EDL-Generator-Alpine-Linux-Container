@@ -1,26 +1,6 @@
 # Description: 
 This script normalizes the data contained in the file published by Binary Edge at https://api.binaryedge.io/v1/minions into a format that can be consumed as an EDL by the Palo Alto NGFW
 
-The Script reads in the file minions from the current working directory and then strips out the following lines and characters:
-
-1. From the first line  
-
-         {"scanners":[ "
-
-is eliminated before the first IP Address in the file
-
-2. Each instance of 
-
-          ", "
-
-is replaced by a newline
-
-3. The characters
-
-           "]}
-
-Are removed from the last IP Address in the file
-
 # Requirements & Dependencies
 1. Python3
 2. Python3 requests module (https://pypi.org/project/requests/)
