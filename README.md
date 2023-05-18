@@ -1,18 +1,15 @@
 # Description: 
-This script normalizes the data contained in the file published by Binary Edge at https://api.binaryedge.io/v1/minions into a format that can be consumed as an EDL by the Palo Alto NGFW
+This container normalizes the data contained in the file published by Binary Edge at https://api.binaryedge.io/v1/minions into a format that can be consumed as an EDL by the Palo Alto NGFW
 
-# Requirements & Dependencies
-1. Python3
-2. Python3 requests module (https://pypi.org/project/requests/)
+# Requirements
+This contianer is designed to run on Docker and requries either Docker or Docker Desktop.  
 
-# Installing requests module
-See https://pypi.org/project/requests/
-
-         pip install requests
-
+# Deployment
+1. Clone the Repsitory.
+2. Run the command `docker compose up -d`
 
 # Support Policy
 
-This script is provided under an **as-is, best effort,** support policy. This scripts should be seen as community supported and I will contribute my expertise as and when possible. 
+This container is provided under an **as-is, best effort,** support policy. This container and all code should be seen as community supported.  We will contribute our expertise as and when possible. 
 
-Palo Alto Networks does not provide technical support or help in using or troubleshooting the components of the project through its normal support options such as Palo Alto Networks support teams, or ASC (Authorized Support Centers) partners and backline support options. The underlying product used (Palo Alto Networks NGFW and EDLs) by the scripts is still supported by Palo Alto Networks, but the support is only for the product functionality and not for help in deploying or using this script itself. 
+Palo Alto Networks **does not** provide technical support or help in using or troubleshooting the components of this project through its normal support options such as Palo Alto Networks support teams, or ASC (Authorized Support Centers) partners and backline support options. The underlying product used in conjunction with this container (Palo Alto Networks NGFW and EDLs) is supported by Palo Alto Networks according to support entitlements, but the support is only for the product functionality and not for help in deploying or using this container itself. 
