@@ -17,12 +17,23 @@
 # but the support is only for the product functionality and not for help in deploying 
 # or using the template or script itself. 
 
-# Retrieve contents of the file and store as a string in a buffer 
 import requests
+import os
+from pathlib import Path
+
+# If the output file currently exists, delete it
+ofile = "/tmp/minionsparser/minions.edl.txt"
+if os.path.isfile(ofile):
+    os.remove(ofile)
+    print("Stale Minions File Deleted")
+else:
+    print("Minions File Did Not Exist")
+
+# Retrieve contents of the file and store as a string in a buffer 
 link = "https://api.binaryedge.io/v1/minions"
 f = requests.get(link)
 
-# Replace characters as mentioned above
+# Sanitize the file to be IPv4 Addresses, one per line
 data2 = f.text.replace("{\"scanners\": [\"", "\n")
 data3 = data2.replace("\"]}", "\n")
 newdata = (data3.replace("\", \"", "\n")) 
@@ -31,5 +42,15 @@ newdata = (data3.replace("\", \"", "\n"))
 output = open("/tmp/minionsparser/minions.edl.txt", "w")
 output.writelines(newdata)
 
+# Sort the file by the first octet of the IP Addresses
+
+file = Path("/tmp/minionsparser/minions.edl.txt")
+file.write_text(
+    "\n".join(
+        sorted(
+            file.read_text().split("\n")
+        )
+    )
+)
 # Close the file
 output.close()
