@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # 
 # Description: This script normalizes the data contained in the file published by 
 # Binary Edge at https://api.binaryedge.io/v1/minions into a format that can be 
