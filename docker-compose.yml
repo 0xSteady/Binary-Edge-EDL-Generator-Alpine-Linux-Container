@@ -1,5 +1,0 @@
-services:
-  minionsparser:
-    build: .
-    volumes: 
-      - /tmp/minionsparser:/tmp/minionsparser
