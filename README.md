@@ -6,7 +6,7 @@ This contianer is designed to run on Docker and requries either Docker or Docker
 
 # Deployment
 1. Clone the Repsitory.
-2. Run build-image.sh
+2. Run `build-image.sh`
 
 # Support Policy
 

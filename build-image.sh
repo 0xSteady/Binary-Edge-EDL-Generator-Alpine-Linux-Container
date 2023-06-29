@@ -1,4 +1,4 @@
 #!/bin/sh
-# docker compose up -d 
-docker build -t 0x_steady/binaryedge_edl:1.0 .
-docker run -d -e TZ=America/New_York -v /tmp/minionsparser:/tmp/minionsparser --name binaryedge_edl 0x_steady/binaryedge_edl:1.0
+
+docker build -t 0xsteady/minionsparaer:1.0 .
+docker run -itd -e TZ=America/New_York --mount type=bind,source=/tmp/minionsparser/,target=/tmp/minionsparser --name minionsparser 0xsteady/minionsparser:1.0
